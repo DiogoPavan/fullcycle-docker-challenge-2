@@ -4,6 +4,6 @@ module.exports = {
     host: 'mysql-db',
     user: 'root',
     password: 'root',
-    database: 'node-challenge',
+    database: 'nodechallenge',
   }
 }

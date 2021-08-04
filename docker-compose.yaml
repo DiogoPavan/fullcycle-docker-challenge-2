@@ -32,9 +32,10 @@ services:
     restart: always
     tty: true
     volumes:
-      - ./mysql:/var/lib/mysql   
+      - ./db/init:/docker-entrypoint-initdb.d
+      - ./db/mysql:/var/lib/mysql   
     environment: 
-      - MYSQL_DATABASE=node-challenge
+      - MYSQL_DATABASE=nodechallenge
       - MYSQL_ROOT_PASSWORD=root
     networks: 
       - challenge-network  

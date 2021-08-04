@@ -9,8 +9,6 @@ services:
     entrypoint: dockerize --wait tcp://mysql-db:3306 --timeout 30s node index.js
     networks: 
       - challenge-network
-    volumes: 
-      - ./app:/usr/src/app
     tty: true
     depends_on: 
       - mysql-db
